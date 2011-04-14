@@ -1,0 +1,279 @@
+﻿html, body
+{
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    cursor: default;
+    background-color:#E1F7FA;
+    width:1100px;
+}
+
+/* Header */
+
+.header #logo
+{
+	font-size: 50px;
+	font-weight:bold;
+	color:#4998A3;
+	text-shadow: white 0 1px 0;
+	padding:20px 0 0 20px;
+	display:inline;
+}
+
+.header #logo a
+{
+	font-size: 50px;
+	font-weight:bold;
+	color:#4998A3;
+	text-shadow: white 0 1px 0;
+	text-decoration:none;
+}
+
+.header #subtitle
+{
+	font-size: 15px;
+	font-weight:bold;
+	color:#ADBABB;
+	text-shadow: white 0 1px 0;
+	padding:20px 0 0 0px;
+	display:inline;
+}
+
+.header #subtitle a
+{
+	color:#2768D9;
+	text-decoration:none;
+}
+
+.fb-holder
+{
+	margin:0 0 0 20px;
+}
+
+/* Content box */
+
+.content-box
+{
+	background-color:#4998A3;
+	width:400px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px;
+	border-top-left-radius: 10px 10px;
+	border-top-right-radius: 10px 10px;
+	border-bottom-right-radius: 10px 10px;
+	border-bottom-left-radius: 10px 10px;
+	text-align:center;
+	margin: 0px 0 0 20px;
+	-webkit-box-shadow: 0 0 10px #4998A3;
+    box-shadow: 0 0 10px #4998A3;
+    -moz-box-shadow: 0 0 10px #4998A3;
+    padding:0 0 10px 0;
+    float:left;
+    z-index:999;
+}
+
+.content-box h1
+{
+	font-size: 35px;
+	font-weight:bold;
+	color:#efefef;
+	text-shadow: #aaaaaa 0 1px 0;
+	padding: 10px 0 0 0;
+}
+
+.content-box h2 a
+{
+	font-size: 25px;
+	font-weight:bold;
+	color:#8fd0d0;
+	text-shadow: #aaaaaa 0 1px 0;
+	padding: 10px 0 0 0;
+	text-decoration:none;
+}
+
+.content-box h2 a:hover
+{
+	text-decoration:underline;
+}
+
+.content-box .song-input
+{
+	padding:0 0 10px 0;
+	font-size:15px;
+	font-weight:bold;
+	color:#eee;
+	text-shadow: #aaaaaa 0 1px 0;
+}
+.content-box input
+{
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-bottom-left-radius: 3px 3px;
+	background-color:#8fd0d0;
+	border:none;
+	padding: 4px 6px 4px 6px;
+	-webkit-box-shadow: 0 0 4px #666;
+    box-shadow: 0 0 4px #666;
+    -moz-box-shadow:  0 0 4px #666;
+    font-weight:bold;
+    color: #7ec0c0;
+    font-size:16px;
+    width: 130px;
+    
+}
+
+.content-box .song
+{
+	text-align:right;
+	margin: 0 5px 0 0;
+}
+
+.content-box .artist
+{
+	text-align:left;
+	margin: 0 0 0 5px;
+}
+
+.content-box .more-button
+{
+	font-size:15px;
+	font-weight:bold;
+	color:#eee;
+	text-shadow: #aaaaaa 0 1px 0;
+}
+
+.content-box .more-button p
+{
+	display:inline;
+}
+
+.content-box .more-button p:hover
+{
+	cursor: pointer;
+    text-decoration:underline;
+}
+
+/* connector */
+
+.find-button
+{
+	background-color: #4998A3;
+	height:100px;
+	width: 0px;
+	float:left;
+	font-weight:bold;
+	font-size:25px;
+	margin:70px 0 0 0;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 10px 10px;
+	border-bottom-right-radius: 10px 10px;
+	border-bottom-left-radius: 0px 0px;
+	text-align:center;
+	-webkit-box-shadow: 0 0 10px #4998A3;
+    box-shadow: 0 0 10px #4998A3;
+    -moz-box-shadow: 0 0 10px #4998A3;
+    z-index:100;
+    color:#eee;
+	text-shadow: #aaaaaa 0 1px 0;
+}
+
+.find-button:hover
+{
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.connector
+{
+	background-image:url('arrow100.png');
+	background-position:right;
+	height:100px;
+	margin:70px 0 0 0;
+	float:left;
+}
+
+#first-box
+{
+	margin: 0 0 0 0;
+	width:500px;
+}
+
+.mix-holder .container
+{
+	background-color:#eee;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-bottom-left-radius: 3px 3px;
+	padding:10px 0 0 0;
+	margin:0 0 5px 17px;
+	border:solid 2px #666;
+	float:left;
+	width: 220px;
+	overflow:hidden;
+	height: 223px;
+}
+
+#arrow-down
+{
+	height:96px;
+	width:100px;
+	background-image:url('arrowdown.png');
+	background-position:bottom;
+	float:left;
+	margin:0 0 0 716px;
+}
+
+#second-box
+{
+	float:right;
+	margin:0 135px 50px 0;
+}
+
+.song-holder
+{
+	margin: 0 0 10px 0;
+}
+
+.song-suggestion
+{
+	padding:0 0 10px 0;
+	font-size:16px;
+	font-weight:bold;
+	color:#eee;
+	text-shadow: #aaaaaa 0 1px 0;
+}
+
+#third-box
+{
+	margin: 0 0 50px 20px;
+	width:500px;
+}
+
+#arrow-left
+{
+	height:77px;
+	float:right;
+	width:45px;
+	margin:100px 0 0 0;
+	background-image:url('arrowleft.png');
+	background-position:left;
+}
+
+.loading-image
+{
+	display:inline;	
+	margin: 0 0 20px 0;
+}
+
+
+.lol
+{
+	float:left;
+	height:50px;	
+}

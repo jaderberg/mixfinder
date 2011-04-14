@@ -1,0 +1,43 @@
+-----------------------------------------------------------
+
+Mixfinder
+
+http://mixfinder.sites.djangohosting.ch
+
+-----------------------------------------------------------
+
+Note: all urls support JSON and JSONP by adding &callback=?
+
+Process as follows:
+
+
+1. Request session token: http://mixfinder.sites.djangohosting.ch/finder/start-session/
+
+Example response: {"result": "success", "session_id": "5b3508ea-9fca-4df9-b375-61e0dd475041"}
+
+Save session_id.
+
+
+2. Start mixfinder process: http://mixfinder.sites.djangohosting.ch/finder/find-mixes/session_id/?q={"trackList":["song1 - artist1","song2 - artist2",...]}
+
+This takes some time to complete fully. Callback will only occur once entire process has occurred (i.e. mixes found, related songs found, related mixes found).
+
+Response example: jsonp1300470081210({"tracks": ["split the atom - noisia", "xray - sub focus", "diesel power - prodigy"], "result": "success", "session_id": "ef507cc6-cb26-4e4b-89ff-38b64e0cee9a", "response": "complete"})
+
+
+3. Poll the different stages to get results as they come in. This avoids waiting for entire process to complete for feedback:
+
+http://mixfinder.sites.djangohosting.ch/finder/stage-data/session_id/?stage=1 (or stage=2, stage=3)
+
+If stage not completed : {"response": "not complete", "result": "success", "session_id": "5b3508ea-9fca-4df9-b375-61e0dd475041", "stage": 1}
+
+Otherwise stage data is returned: jsonp1300470081220({"response": "stage complete", "data": {"shownext": 3, "songs": ["Gangster (Trolley Snatcha Remix) by Dreadzone", "Diesel Power by The Prodigy", "Nowhere To Run (Datsik & Excision Remix) by Apex", "Sweet Shop by Doctor P", "Woo Boost by Rusko", "Machine Gun (16 Bit Remix) by Noisia", "Typhoon by Foreign Beggars ft. Chasing Shadows", "Technetium by Reso", "Hotline by Torqux & Twist"]}, "result": "success", "session_id": "ef507cc6-cb26-4e4b-89ff-38b64e0cee9a", "stage": 2})
+
+
+4. Once all stages have been polled and data received, end the session to delete tempory session data from server:
+
+http://mixfinder.sites.djangohosting.ch/finder/end-session/session_id/
+
+-----------------------------------------------------------
+
+Max Jaderberg 2011
